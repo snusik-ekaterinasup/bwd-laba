@@ -1,0 +1,176 @@
+/** @format */
+
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+	box-sizing: border-box; /* Добавляем box-sizing: border-box */
+}
+
+body {
+	background: rgb(27, 24, 24);
+	font-family: sans-serif;
+}
+
+h1 {
+	padding-top: 21px;
+	color: aqua;
+	font-size: 3rem; /* Используем rem для адаптивности */
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+input {
+	background: #d9cdcd;
+	color: #ffffff;
+	border: solid aqua;
+	text-align: center;
+	padding: 1rem; /* Добавляем отступы */
+	font-size: 1rem;
+}
+
+.todo__add {
+	background-color: aqua;
+	border: solid white;
+	padding: 1rem 2rem; /* Добавляем отступы */
+	margin-left: 22%;
+}
+
+.todo__new {
+	width: 90%; /* Задаем ширину в процентах */
+	max-width: 400px; /* Ограничиваем максимальную ширину */
+	margin: 0 auto; /* Центрируем */
+}
+
+th {
+	background: #d9cdcd;
+	padding: 1rem; /* Добавляем отступы */
+	font-size: 1rem;
+}
+
+table {
+	text-align: center;
+	width: 100%; /* Задаем ширину в процентах */
+	margin-bottom: 2rem;
+}
+
+.clr-aqua {
+	background-color: aqua;
+	color: white;
+	font-size: 2rem; /* Используем rem для адаптивности */
+	padding: 1rem 2rem; /* Добавляем отступы */
+}
+
+.tbl {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 80%;
+	margin: 0 auto;
+	gap: 20px;
+	padding-top: 7px;
+}
+
+.text-orange {
+	color: rgb(242, 95, 37);
+}
+
+.text-podcherk {
+	text-decoration: underline;
+}
+
+.text-zacherk {
+	text-decoration: line-through;
+}
+
+.delete-todo {
+	color: rgb(242, 95, 37);
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+
+input[type='checkbox'] {
+	cursor: pointer;
+	height: 20px;
+}
+
+.th-size {
+	width: 200px;
+	height: 200px;
+}
+
+.listok {
+	display: flex;
+	background-color: white;
+	height: 100%;
+	justify-content: center;
+	border-radius: 5px;
+	vertical-align: center;
+}
+
+.plusAndInput {
+	.plusAndInput {
+		display: flex;
+		flex-direction: row; /* Изменяем направление на горизонтальное */
+		width: 100%;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.dialog {
+		position: fixed; /* Позиционируем диалог относительно экрана */
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: #d9cdcd;
+		padding: 2rem; /* Добавляем отступы */
+		border-radius: 5px; /* Добавляем скругленные углы */
+		width: 90%; /* Задаем ширину в процентах */
+		max-width: 350px; /* Ограничиваем максимальную ширину */
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Добавляем тень */
+	}
+
+	@media (max-width: 768px) {
+		/* Стили для экранов с шириной менее 768 пикселей */
+		h1 {
+			font-size: 2rem;
+		}
+
+		.plusAndInput {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			align-items: center;
+			gap: 10px;
+		}
+
+		.dialog {
+			width: 90%;
+		}
+	}
+}
+.tbl > div {
+	flex: 1;
+}
+th {
+	width: 30%;
+}
+.checkbox {
+	width: 10px;
+}
+.closeModuleDialog {
+	width: 40px;
+	height: 40px;
+	border-radius: 6px;
+}
+.parentTbl {
+	border-radius: 5px;
+}
+.AddText {
+	font-family: cursive;
+	font-weight: bold;
+	color: white;
+	font-size: 20px;
+}

@@ -1,0 +1,21 @@
+/** @format */
+
+img {
+	padding-left: 512px;
+	width: 600px;
+	height: 600px;
+	margin-right: 100px;
+	position: absolute;
+}
+.MainContent {
+	display: flex;
+	color: white;
+	font-size: 30px;
+	font-family: cursive;
+}
+.MainTitle {
+	display: block;
+	width: 400px;
+	padding: 100px;
+	text-align: center;
+}

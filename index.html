@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="header.css">
+  <script src="jsIndex.js" defer></script>
+  <script src="burger.js"></script>
+
+</head>
+<body>
+   <header>
+    <div class="logo">
+      <span>ToDo</span>
+      <span>Snusik</span>
+    </div>
+      <nav class="nav">
+          <a href="main.html">Главная</a>
+          <a class="podcherk" href="index.html">ToDoList</a>
+          <a href="project.html">Projects</a>
+          <a href="about.html">О приложинии</a>
+      </nav>
+      <div class="burger">
+        <span></span>
+      </div>
+  </header>
+  <div class="todo">
+      <div class="todo__content">
+        <h1 class="todo__title">Все задачи</h1>
+       <div class="todo__new">
+        <div class="plusAndInput">
+          <button id="add" class="todo__add"><span class = "AddText">Добавить ToDo</span></button>
+           
+          <dialog id = "ModuleDialog">
+            <div class="dialog">
+            <input type="text">
+            <button id="closeModuleDialog" class="closeModuleDialog">Ok</button>
+            </div>
+          </dialog>
+          
+       </div>
+        </div>
+        <div id="tasks" class="todo__list">
+        </div>
+        </div>
+        <div class="parentTbl">
+        <div class="tbl">
+        <table>
+          <tr>
+            <th class="clr-aqua">
+              Задачи
+            </th>
+            <th class="clr-aqua">
+              В работе
+            </th>
+            <th class="clr-aqua">
+              Выполненные
+            </th>
+          </tr>
+          <tr>
+            <th class="text-orange th-size "><div class="listok"><input type="checkbox" class="checkbox fchkd"   /> Побыть пикми найкпро вумен<button class="delete-todo"> &#x2716;</button></div></th>
+            <th class="text-orange text-podcherk  th-size"><div class="listok"><input type="checkbox" class="checkbox"  />Погулять на балконе<button class="delete-todo"> &#x2716;</button></div></th>
+            <th class="text-orange th-size center-content">
+              <div class="listok"><span class="text-center text-zacherk"><input type="checkbox" checked class="fchkd checkbox" />Вдохнуть воздух</span><button class="delete-todo"  > &#x2716;</button></div></th>
+          </tr>
+        </table>
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
+      <dialog></dialog>
+ <script src="burger.js"></script>
+</body>
+</html>
