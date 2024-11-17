@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
-   entry: './index.js', // Точка входа для сборки проекта
+   entry: './src/index.js', // Точка входа для сборки проекта
 
 
    output: {
@@ -24,11 +24,29 @@ module.exports = {
 
    plugins: [
        new HtmlWebpackPlugin({
-           template: './index.html',
+           template: './src/index.html',
            inject: true,
            chunks: ['index'],
            filename: 'index.html'
        }),
+       new HtmlWebpackPlugin({
+        template: './src/main.html',
+        inject: true,
+        chunks: ['index'],
+        filename: 'main.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/project.html',
+        inject: true,
+        chunks: ['index'],
+        filename: 'project.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/about.html',
+        inject: true,
+        chunks: ['index'],
+        filename: 'about.html'
+    }),
    ],
 
 
