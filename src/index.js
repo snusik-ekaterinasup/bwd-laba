@@ -1,0 +1,8 @@
+import './style/header.css'
+import './style/404.css'
+import './style/about.css'
+import './style/forMain.css'
+import './style/headermain.css'
+import './style/indexheader.css'
+import './style/main.css'
+import './style/style.css'
