@@ -72,10 +72,6 @@ table {
 	padding-top: 7px;
 }
 
-.text-orange {
-	color: rgb(242, 95, 37);
-}
-
 .text-podcherk {
 	text-decoration: underline;
 }
@@ -173,4 +169,13 @@ th {
 	font-weight: bold;
 	color: white;
 	font-size: 20px;
+}
+.tasks__comment-input-area {
+    margin-top: 5px;
+}
+
+.tasks__comment-input {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box; /* Include padding in width */
 }

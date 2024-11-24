@@ -1,0 +1,326 @@
+/** @format */
+
+.tasks__container {
+	display: flex;
+	flex-direction: column;
+	gap: 20px; /* Расстояние между элементами */
+}
+
+.tasks__title {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.tasks__dialog {
+	border: 1px solid black;
+	padding: 20px;
+	border-radius: 5px;
+}
+
+.tasks__form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.tasks__form-container {
+	display: flex;
+	flex-direction: column;
+	gap: 15px; /* Расстояние между контейнерами */
+}
+
+.tasks__form-inputs {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.tasks__input,
+.tasks__checkbox {
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.tasks__form-buttons {
+	display: flex;
+	gap: 10px;
+}
+
+.tasks__inner {
+	display: flex;
+	gap: 20px;
+}
+
+.tasks__column {
+	flex: 1; /* Равномерное распределение ширины между колонками */
+	border: 1px solid #ccc;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.tasks__column h2 {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.sort__container {
+	display: flex;
+	gap: 5px;
+	margin-bottom: 10px;
+}
+
+.sort__button {
+	padding: 5px 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.tasks__list {
+	list-style: none;
+	padding: 0;
+}
+
+.tasks__item {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 5px 0;
+	border-bottom: 1px solid #eee;
+}
+
+.tasks__item-checkbox {
+	margin-right: 5px;
+}
+
+.tasks__item-text {
+	flex: 1; /* Занимает оставшееся место */
+}
+
+.tasks__item-close {
+	text-decoration: none;
+	color: red;
+	cursor: pointer;
+}
+
+.tasks__button-add {
+	margin-top: 20px;
+	width: 100%;
+	align-self: center;
+}
+
+/*  Responsive adjustments (optional)  */
+@media (max-width: 768px) {
+	.tasks__inner {
+		flex-direction: column; /*  Stacks columns vertically on smaller screens */
+	}
+	.tasks__column {
+		width: 100%;
+	}
+}
+.tasks__item-text {
+	color: white;
+}
+.h2 {
+	color: white;
+}
+.tasks__item-close {
+	display: inline-block; /* Make it inline-block to easily position */
+	margin-left: 10px; /* Adjust spacing */
+	cursor: pointer; /* Indicate it's clickable */
+	text-decoration: none; /* Remove default link underline */
+	color: red; /* Or any color you prefer */
+}
+
+/* Optional hover effect */
+.tasks__item-close:hover {
+	text-decoration: underline;
+}
+.tasks__item-close {
+	color: white;
+}
+.tasks__item-close {
+	content: '';
+	position: relative;
+	right: 0;
+	margin-left: auto;
+	width: 20px;
+	aspect-ratio: 1;
+	cursor: pointer;
+	z-index: 1;
+	background-color: var(--secondary-500);
+	opacity: 0.3;
+	border-radius: 50%;
+	border: none;
+	transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.tasks__item:hover .tasks__item-close {
+	opacity: 0.5;
+}
+
+.tasks__item:hover .tasks__item-close:hover {
+	opacity: 0.8;
+}
+
+body:has(dialog[open]) {
+	overflow: hidden;
+}
+
+dialog {
+	border: none;
+	padding: 0;
+}
+
+dialog::backdrop {
+	background-color: rgba(0, 0, 0, 0.5);
+	-webkit-backdrop-filter: blur(3px);
+	backdrop-filter: blur(3px);
+}
+
+dialog + .backdrop {
+	background-color: rgba(0, 0, 0, 0.5);
+	-webkit-backdrop-filter: blur(3px);
+	backdrop-filter: blur(3px);
+	color: black;
+}
+
+.tasks__title {
+	margin-bottom: 20px;
+}
+.tasks__button-add {
+	margin-inline: auto;
+	margin-block: 30px;
+}
+.tasks__form {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 40px 60px;
+	border-radius: 20px;
+}
+.tasks__form-container {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.tasks__form-inputs {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.tasks__checkbox {
+	width: 20px;
+	height: 20px;
+	accent-color: var(--secondary-500);
+	cursor: pointer;
+}
+.tasks__form-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 10px;
+}
+.tasks__inner {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px 0px;
+}
+.tasks__column {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	width: 30%;
+}
+.tasks__list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.tasks__item {
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	border-radius: 10px;
+	/* cursor: grab; */
+	transition: border 0.3s ease;
+	border: 2px solid var(--primary-500);
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+.tasks__item:hover {
+	border: 2px solid var(--secondary-500);
+}
+/* .tasks__item:active {
+	cursor: grabbing;
+} */
+
+.tasks__item-close {
+	content: '';
+	position: relative;
+	right: 0;
+	margin-left: auto;
+	width: 20px;
+	aspect-ratio: 1;
+	cursor: pointer;
+	z-index: 1;
+	background-color:white;
+	opacity: 0.1;
+	border: none;
+	transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.tasks__item:hover .tasks__item-close {
+	opacity: 0.5;
+}
+
+.tasks__item:hover .tasks__item-close:hover {
+	opacity: 0.8;
+}
+
+.tasks__item-checkbox {
+	width: 15px;
+	height: 15px;
+	accent-color: var(--primary-500);
+	cursor: pointer;
+	border: 2px solid var(--primary-500);
+	border-radius: 50%;
+	transition: border 0.3s ease;
+	margin-right: 10px;
+}
+
+.tasks__item-checkbox:checked + .tasks__item-text {
+	text-decoration: line-through;
+	color: white;
+}
+
+@media (width <= 768px) {
+	.tasks__form {
+		padding: 40px 20px;
+	}
+	.tasks__form-buttons {
+		flex-direction: column;
+	}
+	.tasks__inner {
+		flex-direction: column;
+	}
+	.tasks__column {
+		width: 100%;
+	}
+}
+.tasks__form {
+	color: black;
+}
+tasks__input {
+	color: black;
+}
+.tasks__item-btn{
+	color: white;
+	background-color: #fff;
+}
+.tasks__comments p {
+  color: orange;
+}

@@ -1,79 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="./style/style.css">
-  <link rel="stylesheet" href="./style/header.css">
-  <script src="jsIndex.js" defer></script>
-  <script src="burger.js"></script>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/end.css">
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/header.css">
+    <script src="jsIndex.js" defer></script>
+    <script src="burger.js"></script>
 
-</head>
-<body>
-   <header>
-    <div class="logo">
-      <span>ToDo</span>
-      <span>Snusik</span>
-    </div>
-      <nav class="nav">
-          <a href="main.html">Главная</a>
-          <a class="podcherk" href="index.html">ToDoList</a>
-          <a href="project.html">Projects</a>
-          <a href="about.html">О приложинии</a>
-      </nav>
-      <div class="burger">
-        <span></span>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <span>ToDo</span>
+        <span>Snusik</span>
       </div>
-  </header>
-  <div class="todo">
-      <div class="todo__content">
-        <h1 class="todo__title">Все задачи</h1>
-       <div class="todo__new">
-        <div class="plusAndInput">
-          <button id="add" class="todo__add"><span class = "AddText">Добавить ToDo</span></button>
-           
-          <dialog id = "ModuleDialog">
-            <div class="dialog">
-            <input type="text">
-            <button id="closeModuleDialog" class="closeModuleDialog">Ok</button>
-            </div>
-          </dialog>
-          
-       </div>
+        <nav class="nav">
+            <a href="main.html">Главная</a>
+            <a class="podcherk" href="index.html">ToDoList</a>
+            <a href="project.html">Projects</a>
+            <a href="about.html">О приложинии</a>
+        </nav>
+        <div class="burger">
+          <span></span>
         </div>
-        <div id="tasks" class="todo__list">
-        </div>
-        </div>
-        <div class="parentTbl">
-        <div class="tbl">
-        <table>
-          <tr>
-            <th class="clr-aqua">
-              Задачи
-            </th>
-            <th class="clr-aqua">
-              В работе
-            </th>
-            <th class="clr-aqua">
-              Выполненные
-            </th>
-          </tr>
-          <tr>
-            <th class="text-orange th-size "><div class="listok"><input type="checkbox" class="checkbox fchkd"   /> Побыть пикми найкпро вумен<button class="delete-todo"> &#x2716;</button></div></th>
-            <th class="text-orange text-podcherk  th-size"><div class="listok"><input type="checkbox" class="checkbox"  />Погулять на балконе<button class="delete-todo"> &#x2716;</button></div></th>
-            <th class="text-orange th-size center-content">
-              <div class="listok"><span class="text-center text-zacherk"><input type="checkbox" checked class="fchkd checkbox" />Вдохнуть воздух</span><button class="delete-todo"  > &#x2716;</button></div></th>
-          </tr>
-        </table>
-        </div>
-        </div>
-        </div>
-      </div>
-    </div>
-      <dialog></dialog>
- <script src="burger.js"></script>
- <script src="bundle.js"></script>
-</body>
-</html>
+    </header>
+<section class="container">
+			<div class="tasks__container">
+				<h1 class="tasks__title h1">Список задач</h1>
+
+				<dialog class="tasks__dialog" id="taskDialog">
+					<form method="dialog" class="tasks__form">
+						<h2 class="h2">Добавить задачу</h2>
+						<div class="tasks__form-container">
+							<div class="tasks__form-inputs">
+								<input class="tasks__input form__input" type="text" name="taskName" id="taskName"
+									placeholder="Название задачи" tabindex="1">
+								<input class="tasks__checkbox form__input" type="checkbox" name="taskStatus" id="taskStatus">
+							</div>
+							<div class="tasks__form-buttons">
+								<button class="button button-primary" type="submit">Добавить</button>
+								<button class="button button-secondary" type="button"
+									onclick="window.taskDialog.close()">Закрыть</button>
+							</div>
+						</div>
+					</form>
+				</dialog>
+
+				<div class="tasks__inner">
+					<div class="tasks__column">
+						<h2 class="h2">Предстоящие</h2>
+						<ul class="tasks__list" id="upcomingList">
+							<li class="tasks__item">
+								<input class="tasks__item-checkbox" type="checkbox" name="" id="">
+								<span class="tasks__item-text">Погладить кота</span>
+								
+							</li>
+							<li class="tasks__item">
+								<input class="tasks__item-checkbox" type="checkbox" name="" id="">
+								<span class="tasks__item-text">Искупать собакена</span>
+								<a class="tasks__item-close" href="javascript:void(0)"> XX </a>
+							</li>
+						</ul>
+					</div>
+					<div class="tasks__column">
+						<h2 class="h2">В работе</h2>
+						<ul class="tasks__list" id="inProgressList">
+
+							<li class="tasks__item">
+								<input class="tasks__item-checkbox" type="checkbox" name="" id="">
+								<span class="tasks__item-text">Заработать 1 000 000 денег</span>
+								<a class="tasks__item-close" href="javascript:void(0)"></a>
+							</li>
+							<li class="tasks__item">
+								<input class="tasks__item-checkbox" type="checkbox" name="" id="">
+								<span class="tasks__item-text">Сделать Численны методы</span>
+								<a class="tasks__item-close" href="javascript:void(1)"></a>
+							</li>
+						</ul>
+					</div>
+					<div class="tasks__column">
+						<h2 class="h2">Выполненные</h2>
+						<ul class="tasks__list" id="completedList">
+							<li class="tasks__item">
+								<input class="tasks__item-checkbox" checked type="checkbox" name="" id="">
+								<span class="tasks__item-text">Приготовить макароны</span>
+								<a class="tasks__item-close" href="javascript:void(0)"></a>
+							</li>
+							<li class="tasks__item">
+								<input class="tasks__item-checkbox" checked type="checkbox" name="" id="">
+								<span class="tasks__item-text">Заточить макароны</span>
+								<a class="tasks__item-close" href="javascript:void(0)"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+
+				<button class="tasks__button-add button button-primary" onclick="window.taskDialog.showModal()">Добавить
+					задачу</button>
+
+			</div>
+		</section>
+
+	</main>
+
+        <dialog></dialog>
+  <script src="burger.js"></script>
+  <script src="todo.js"></script>
+  </body>
+  </html>
